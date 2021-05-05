@@ -40,7 +40,7 @@
     const BASIC_DATA_FIELDS = ['address_components', 'adr_address', 'alt_id', 
         'formatted_address', 'geometry', 'icon', 'id', 'name', 
         'permanently_closed', 'photo', 'place_id', 'scope', 'type', 'url', 
-        'utc_offset', 'vicinity'];
+        'utc_offset_minutes', 'vicinity'];
 
     export default {
         name: 'VueGoogleAutocomplete',
@@ -64,7 +64,7 @@
           },
 
           types: {
-            type: String,
+            type: [Array, String],
             default: 'address'
           },
 
