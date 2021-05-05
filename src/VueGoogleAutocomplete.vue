@@ -150,6 +150,8 @@
             options.types = (typeof this.types === 'array') ? this.types : [this.types];
           }
 
+          console.log(options)
+
           if (this.country) {
             options.componentRestrictions = {
               country: this.country
