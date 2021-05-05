@@ -147,7 +147,7 @@
           const options = {};
 
           if (this.types) {
-            options.types = [this.types];
+            options.types = (typeof this.types === 'array') ? this.types : [this.types];
           }
 
           if (this.country) {
@@ -357,7 +357,7 @@
             filterGeocodeResultTypes (results) {
                 if (!results || !this.types) return results;
                 let output = [];
-                let types = this.types;
+                let types = (typeof this.types === 'array') ? this.types : [this.types];
                 if (types.includes('(cities)')) types = types.concat(CITIES_TYPE);
                 if (types.includes('(regions)')) types = types.concat(REGIONS_TYPE);
 
